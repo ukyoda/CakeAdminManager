@@ -25,15 +25,35 @@
 
 ## インストール
 
-下記のコマンドを実行してください
+**リポジトリ追加**
+
+composer.jsonに下記を追記してください
 
 ```
-composer require ukyoda/AdminManager
+"repositories": [
+    {
+        "type": "git",
+        "url": "https://github.com/ukyoda/cakephp-admin-manager.git"
+    }
+],
+```
+
+**プラグインインストール**
+
+```
+composer require ukyoda/admin-manager:dev-master
+```
+
+**プラグインのロード**
+
+config/bootstrap.phpに下記を追記
+
+```
+Plugin::load('AdminManager', ['routes' => true]);
 ```
 
 **DB更新**
 
 ```
 $ bin/cake migrations migrate -p AdminManager
-$ bin/cake migrations seed -p AdminManager
 ```
