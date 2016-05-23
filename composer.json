@@ -1,5 +1,5 @@
 {
-    "name": "ukyoda/cakephp-admin-manager",
+    "name": "ukyoda/admin-manager",
     "description": "AdminManager plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
