@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ukyoda/CakeAdminManager/issues",
-        "source": "https://github.com/ukyoda/CakeAdminManager"
+        "issues": "https://github.com/ukyoda/cake-admin-manager/issues",
+        "source": "https://github.com/ukyoda/cake-admin-manager"
     },
     "require": {
         "php": ">=5.4.16",
