@@ -1,0 +1,37 @@
+{
+    "name": "ukyoda/AdminManager",
+    "description": "AdminManager plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "homepage": "http://twitter.com/ukyoda"
+        },
+        {
+            "name": "ukyoda",
+            "homepage": "http://github.com/ukyoda/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ukyoda/CakeAdminManager/issues",
+        "source": "https://github.com/ukyoda/CakeAdminManager"
+    },
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdminManager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AdminManager\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

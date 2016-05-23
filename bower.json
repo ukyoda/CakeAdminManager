@@ -1,0 +1,24 @@
+{
+  "name": "sslan",
+  "description": "SS情テクサーバ管理ページ",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Katayama"
+  ],
+  "license": "MIT",
+  "homepage": "http://web01.tip.kddilabs.jp/sslan",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3",
+    "AdminLTE": "adminlte#^2.3.3",
+    "font-awesome": "^4.6.1"
+  }
+}
