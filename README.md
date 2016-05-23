@@ -1,5 +1,7 @@
 # AdminManager plugin for CakePHP
 
+**注意!!まだ作成中**
+
 ## 概要
 
 このプラグインはCakePHP3にシステム管理画面を提供します。
