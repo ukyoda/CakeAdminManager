@@ -56,4 +56,5 @@ Plugin::load('AdminManager', ['routes' => true]);
 
 ```
 $ bin/cake migrations migrate -p AdminManager
+$ bin/cake migrations seed -p AdminManager
 ```
