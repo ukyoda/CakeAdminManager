@@ -32,3 +32,22 @@ composer require ukyoda/AdminManager
 $ bin/cake migrations migrate -p AdminManager
 $ bin/cake migrations seed -p AdminManager
 ```
+
+## クイックスタート
+
+**新規ユーザの登録**
+
+CakePHPがデバッグモードで起動している場合は、下記URLにアクセスすると認証なしでユーザ登録画面にアクセスできます.
+
+//your-server/cake-root/admin-manager/users/create
+
+> 非デバッグモードの場合は、管理画面ログイン後に作成可能になります。
+
+**管理画面にアクセス**
+
+下記パスでログインできます
+
+//your-server/cake-root/admin-manager
+
+
+
