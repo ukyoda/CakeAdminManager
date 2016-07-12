@@ -12,24 +12,24 @@
             <?= $this->Flash->render() ?>
             <?= $this->Form->create($user) ?>
             <fieldset class="form-group">
-                <?= $this->Form->input('name');?>
+                <?= $this->Form->input('name', ['class' => 'form-control']);?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('screen_name') ?>
+                <?= $this->Form->input('screen_name', ['class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('mail_address') ?>
+                <?= $this->Form->input('mail_address', ['class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('password')?>
+                <?= $this->Form->input('password', ['class' => 'form-control'])?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('confirm_password', ['type' => 'password'])?>
+                <?= $this->Form->input('confirm_password', ['type' => 'password', 'class' => 'form-control'])?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('role_mst_id', ['options' => $roleMst]) ?>
+                <?= $this->Form->input('role_mst_id', ['options' => $roleMst, 'class' => 'form-control']) ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit'), ['class' => ['btn-primary']]) ?>
+            <?= $this->Form->button(__('Submit'), ['class' => ['btn btn-primary']]) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

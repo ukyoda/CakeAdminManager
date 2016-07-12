@@ -5,12 +5,12 @@
             <?= $this->Flash->render() ?>
             <?= $this->Form->create('post') ?>
             <fieldset class="form-group">
-                <?= $this->Form->input('screen_name');?>
+                <?= $this->Form->input('screen_name', ['class' => 'form-control']);?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('password');?>
+                <?= $this->Form->input('password', ['class' => 'form-control']);?>
             </fieldset>
-            <?= $this->Form->button(__('ログイン'), ['class' => ['btn-primary', 'col-xs-12']]) ?>
+            <?= $this->Form->button(__('ログイン'), ['class' => 'btn btn-primary col-xs-12']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

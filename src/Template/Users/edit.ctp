@@ -12,21 +12,21 @@
             <?= $this->Flash->render() ?>
             <?= $this->Form->create($user) ?>
             <fieldset class="form-group">
-                <?= $this->Form->input('name');?>
+                <?= $this->Form->input('name', ['class' => 'form-control']);?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('screen_name') ?>
+                <?= $this->Form->input('screen_name', ['class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('mail_address') ?>
+                <?= $this->Form->input('mail_address', ['class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('role_mst_id', ['options' => $roleMst]) ?>
+                <?= $this->Form->input('role_mst_id', ['options' => $roleMst, 'class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('status', ['options' => ['0' => '使用不可', '1' => '利用可能']]) ?>
+                <?= $this->Form->input('status', ['options' => ['0' => '使用不可', '1' => '利用可能'], 'class' => 'form-control']) ?>
             </fieldset>
-            <?= $this->Form->button(__('更新'), ['class' => ['btn-primary']]) ?>
+            <?= $this->Form->button(__('更新'), ['class' => ['btn btn-primary']]) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
