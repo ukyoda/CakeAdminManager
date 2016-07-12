@@ -125,7 +125,7 @@ class UsersController extends AdminController {
      */
     public function login() {
         $this->setTitle('ログイン');
-        $this->viewBuilder()->layout('bukuman-no-side');
+        $this->viewBuilder()->layout('no-side');
         if($this->request->is('post')) {
             $user = $this->Auth->identify();
             if($user) {
