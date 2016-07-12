@@ -15,7 +15,7 @@
                 <?= $this->Form->input('name', ['class' => 'form-control']);?>
             </fieldset>
             <fieldset class="form-group">
-                <?= $this->Form->input('screen_name', ['class' => 'form-control']) ?>
+                <?= $this->Form->input('login_name', ['class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
                 <?= $this->Form->input('mail_address', ['class' => 'form-control']) ?>

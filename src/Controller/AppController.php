@@ -22,7 +22,7 @@ class AppController extends BaseController {
                     'userModel' => 'AdminManager.Users',
                     'finder' => 'auth',
                     'fields' => [
-                        'username' => 'screen_name',
+                        'username' => 'login_name',
                         'password' => 'password'
                     ]
                 ]
