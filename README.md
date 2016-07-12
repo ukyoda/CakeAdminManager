@@ -23,7 +23,7 @@
 下記のコマンドを実行してください
 
 ```
-composer require ukyoda/AdminManager:dev-master
+composer require ukyoda/admin-manager:dev-master
 ```
 
 **プラグインのロード**
