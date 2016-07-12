@@ -23,7 +23,7 @@
 下記のコマンドを実行してください
 
 ```
-composer require ukyoda/AdminManager
+composer require ukyoda/AdminManager:dev-master
 ```
 
 **プラグインのロード**
@@ -56,6 +56,12 @@ CakePHPがデバッグモードで起動している場合は、下記URLにア�
 下記パスでログインできます
 
 //your-server/cake-root/admin-manager
+
+
+## 注意事項
+
+* 本プラグインはまだ開発途中のものです。今後、予告なしに削除・修正することがありますのでご注意ください
+* 本プラグインはMITライセンスに基づく範囲でソースコードの修正・変更ができるものとします
 
 
 
