@@ -26,9 +26,17 @@
 composer require ukyoda/AdminManager
 ```
 
+**プラグインのロード**
+
+config/bootstrap.phpに下記を追記
+
+```php
+Plugin::load('AdminManager', ['routes' => true]);
+```
+
 **DB更新**
 
-```
+```bash
 $ bin/cake migrations migrate -p AdminManager
 $ bin/cake migrations seed -p AdminManager
 ```
