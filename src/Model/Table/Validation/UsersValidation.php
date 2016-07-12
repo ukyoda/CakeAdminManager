@@ -20,18 +20,18 @@ trait UsersValidation {
     $validator
       ->allowEmpty('id', 'create');
 
-    // screen_nameバリデート
+    // login_nameバリデート
     // * 必ず入力
     // * ユニークであること
     $validator
-      ->requirePresence('screen_name', 'create')
-      ->notEmpty('screen_name', '必ず入力して下さい')
-      ->add('screen_name', 'unique', [
+      ->requirePresence('login_name', 'create')
+      ->notEmpty('login_name', '必ず入力して下さい')
+      ->add('login_name', 'unique', [
         'rule' => 'validateUnique',
         'provider' => 'table',
         'message' => 'この値は使用できません'
       ])
-      ->add('screen_name', 'word_check', [
+      ->add('login_name', 'word_check', [
         'rule' => function ($value, $context) {
               //同一Table内などのメソッドも指定可能
               return (bool) preg_match('/^[a-zA-Z0-9_]{3,16}$/', $value);

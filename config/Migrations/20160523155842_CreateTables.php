@@ -32,6 +32,7 @@ class CreateTables extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('screen_name', 'string', [
+                'comment' => '認証用のID',
                 'default' => null,
                 'limit' => 255,
                 'null' => false,
@@ -55,6 +56,7 @@ class CreateTables extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('role_mst_id', 'string', [
+                'comment' => 'ロールID',
                 'default' => 20,
                 'limit' => 4,
                 'null' => false,
@@ -66,11 +68,13 @@ class CreateTables extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('create_time', 'timestamp', [
+                'comment' => '作成日時',
                 'default' => 'CURRENT_TIMESTAMP',
                 'limit' => null,
                 'null' => false,
             ])
             ->addColumn('update_time', 'timestamp', [
+                'comment' => '更新日時',
                 'default' => '0000-00-00 00:00:00',
                 'limit' => null,
                 'null' => false,

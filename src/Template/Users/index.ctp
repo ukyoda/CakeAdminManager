@@ -18,7 +18,7 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('screen_name') ?></th>
+                    <th><?= $this->Paginator->sort('login_name') ?></th>
                     <th><?= $this->Paginator->sort('mail_address') ?></th>
                     <th><?= $this->Paginator->sort('role_mst_id') ?></th>
                     <th><?= $this->Paginator->sort('status') ?></th>
@@ -32,7 +32,7 @@
                 <tr>
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?= h($user->name) ?></td>
-                    <td><?= h($user->screen_name) ?></td>
+                    <td><?= h($user->login_name) ?></td>
                     <td><?= h($user->mail_address) ?></td>
                     <td><?= h($user->role_mst->name) ?></td>
                     <td><?= $user->status==0? '<span class="label label-danger">使用不可</span>': '<span class="label label-success">使用可</span>';?></td>
