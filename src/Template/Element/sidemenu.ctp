@@ -14,9 +14,6 @@
   $pfEdit = $this->Html->link('<i class="fa fa-user"></i>Users',
     ['controller' => 'users', 'action' => 'index'],
     ['escape' => false]);
-  $bkEdit = $this->Html->link('<i class="fa fa-users"></i>Groups',
-    ['controller' => 'bookmarks', 'action' => 'add'],
-    ['escape' => false]);
 ?>
 <aside class="main-sidebar">
   <section class="sidebar">
@@ -29,9 +26,6 @@
       </li>
       <li class="<?= isActive($this, 'Users') ?>">
         <?= $pfEdit ?>
-      </li>
-      <li class="<?= isActive($this, 'Bookmarks') ?>">
-        <?= $bkEdit ?>
       </li>
     </ul>
   </section>

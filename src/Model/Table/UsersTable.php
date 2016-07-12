@@ -33,13 +33,13 @@ class UsersTable extends AppTable {
             'foreignKey' => 'role_mst_id',
             'joinType' => 'INNER'
         ]);
-        $this->hasMany('Bookmarks', [
-            'foreignKey' => 'user_id'
-        ]);
     }
 
     public function findAuth(Query $query) {
-      $query->where(['status' => 1]);//statusが1のユーザーのみ取得
+      $query->where([
+          'status' => 1,
+          'role_mst_id' => '0010'
+      ]);//statusが1のユーザーのみ取得
       $query->contain(['RoleMst']);//アソシエーション（postsテーブルとアソシエーションしていると仮定）
       return $query;
     }
