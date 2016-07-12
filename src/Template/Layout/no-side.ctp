@@ -7,6 +7,7 @@
         <?= $this->Html->css('/admin_manager/libs/AdminLTE/dist/css/AdminLTE.min.css')?>
         <?= $this->Html->css('/admin_manager/libs/AdminLTE/dist/css/skins/skin-green.min.css')?>
         <?= $this->Html->css('/admin_manager/libs/font-awesome/css/font-awesome.min.css')?>
+        <?= $this->Html->css('/admin_manager/css/style.css')?>
         <?= $this->fetch('css')?>
     </head>
     <body>

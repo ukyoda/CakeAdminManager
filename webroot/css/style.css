@@ -1,0 +1,104 @@
+.text-black {
+  color: #000;
+}
+.form-login {
+  background: #ddd;
+  margin: 30px auto;
+  width: 520px;
+  padding: 50px;
+}
+.bookmark-card {
+  color: #000;
+  box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.5);
+  height: 100px;
+  margin-bottom: 20px;
+}
+.bookmark-card:hover {
+  color: #666666;
+  box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.5);
+}
+.bookmark-card:after {
+  clear: both;
+  display: table;
+  content: " ";
+  visibility: hidden;
+}
+.bookmark-card .bk-icon {
+  float: left;
+  width: 100px;
+}
+.bookmark-card .bk-icon img {
+  width: 100%;
+}
+.bookmark-card .bk-content {
+  margin-left: 100px;
+  padding: 2px 10px;
+}
+.bookmark-card .bk-title {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.bookmark-card .bk-description {
+  font-size: 0.8em;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  /* config */
+  line-height: 1.5;
+  height: 3em;
+  background-color: #fff;
+  /* config end */
+  position: relative;
+  padding-right: 1em;
+  overflow: hidden;
+}
+.bookmark-card .bk-description:before {
+  content: "...";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 1em;
+}
+.bookmark-card .bk-description:after {
+  content: "";
+  position: relative;
+  right: -1em;
+  float: right;
+  width: 1em;
+  height: 100%;
+  background-color: inherit;
+  margin-left: -1em;
+}
+.bookmark-card .bk-favicon {
+  margin-right: 2px;
+  width: 1em;
+  vertical-align: middle;
+}
+.bookmark-card-org {
+  color: #000;
+  display: inline-block;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.5);
+}
+.bookmark-card-org:hover {
+  color: #666666;
+  box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.5);
+}
+.bookmark-card-org .bk-icon {
+  width: 1em;
+  vertical-align: middle;
+}
+.example-modal .modal {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  display: block;
+  z-index: 1;
+}
+.example-modal .modal .modal-dialog {
+  width: inherit;
+  height: inherit;
+}
