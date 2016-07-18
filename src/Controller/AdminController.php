@@ -10,6 +10,20 @@ class AdminController extends AppController {
 
     public function initialize() {
         parent::initialize();
+        $this->authSetup([
+            'loginRedirect' => [  // ログイン後に表示するページ
+                'controller' => 'dashboard',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [   // ログアウト後に表示するページ
+                'controller' => 'users',
+                'action' => 'login'
+            ],
+            'loginAction' => [
+                'controller' => 'users',
+                'action' => 'login'
+            ],
+        ]);
         if(!$this->Auth->user()) {
             $this->viewBuilder()->layout('no-side');
         } else {
