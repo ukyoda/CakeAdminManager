@@ -23,10 +23,10 @@
     <li class="list-group-item">
         <div class="row">
             <div class="col-md-3 col-sm-12">
-                <b>Screen Name</b>
+                <b>Login Name</b>
             </div>
             <div class="col-md-9 col-sm-12">
-                <?= $user->screen_name ?>
+                <?= $user->login_name ?>
             </div>
         </div>
     </li>
@@ -36,7 +36,7 @@
                 <b>User Role</b>
             </div>
             <div class="col-md-9 col-sm-12">
-                <?= $user->mail_address ?>
+                <?= $user->role_mst->name ?>
             </div>
         </div>
     </li>
