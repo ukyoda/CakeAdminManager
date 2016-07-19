@@ -23,7 +23,7 @@ class AdminController extends AppController {
                 'controller' => 'users',
                 'action' => 'login'
             ],
-        ]);
+        ], 'AdminManager.Users');
         if(!$this->Auth->user()) {
             $this->viewBuilder()->layout('no-side');
         } else {
@@ -43,6 +43,12 @@ class AdminController extends AppController {
 
     protected function getTitle() {
         return $this->title;
+    }
+
+    protected function _getDefaultAuthConfig() {
+        $config = parent::_getDefaultAuthConfig();
+        $config['authenticate']['Form']['finder'] = 'admin';
+        return $config;
     }
 
 }
