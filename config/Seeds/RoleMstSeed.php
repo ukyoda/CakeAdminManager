@@ -20,20 +20,8 @@ class RoleMstSeed extends AbstractSeed
     {
         $data = [
           [
-            'id' => '0000',
-            'name' => 'マスターユーザ'
-          ],
-          [
             'id' => '0010',
-            'name' => '管理ユーザ'
-          ],
-          [
-            'id' => '0020',
             'name' => '一般ユーザ'
-          ],
-          [
-            'id' => '9999',
-            'name' => 'ゲストユーザ'
           ]
         ];
 
