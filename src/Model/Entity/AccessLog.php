@@ -3,19 +3,7 @@ namespace AdminManager\Model\Entity;
 
 use Cake\ORM\Entity;
 
-/**
- * Group Entity.
- *
- * @property int $id
- * @property string $name
- * @property string $role_mst_id
- * @property \AdminManager\Model\Entity\RoleMst $role_mst
- * @property \Cake\I18n\Time $create_time
- * @property \Cake\I18n\Time $update_time
- * @property \AdminManager\Model\Entity\User[] $users
- */
-class Group extends Entity
-{
+class AccessLog extends Entity {
 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -30,4 +18,5 @@ class Group extends Entity
         '*' => true,
         'id' => false,
     ];
+
 }
