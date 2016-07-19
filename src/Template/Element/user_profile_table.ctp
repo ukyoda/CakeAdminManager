@@ -43,6 +43,16 @@
     <li class="list-group-item">
         <div class="row">
             <div class="col-md-3 col-sm-12">
+                <b>Admin Flg</b>
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <?= $user->admin_flg? '<span class="glyphicon glyphicon-ok text-green"></span>': '<span class="glyphicon glyphicon-remove text-red"></span>';?>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
                 <b>Status</b>
             </div>
             <div class="col-md-9 col-sm-12">

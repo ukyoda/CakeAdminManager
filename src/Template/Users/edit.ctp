@@ -24,6 +24,9 @@
                 <?= $this->Form->input('role_mst_id', ['options' => $roleMst, 'class' => 'form-control']) ?>
             </fieldset>
             <fieldset class="form-group">
+                <?= $this->Form->input('admin_flg') ?>
+            </fieldset>
+            <fieldset class="form-group">
                 <?= $this->Form->input('status', ['options' => ['0' => '使用不可', '1' => '利用可能'], 'class' => 'form-control']) ?>
             </fieldset>
             <?= $this->Form->button(__('更新'), ['class' => ['btn btn-primary']]) ?>

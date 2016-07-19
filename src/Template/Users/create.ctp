@@ -29,6 +29,9 @@
             <fieldset class="form-group">
                 <?= $this->Form->input('role_mst_id', ['options' => $roleMst, 'class' => 'form-control']) ?>
             </fieldset>
+            <fieldset class="form-group">
+                <?= $this->Form->input('admin_flg') ?>
+            </fieldset>
             <?= $this->Form->button(__('Submit'), ['class' => ['btn btn-primary']]) ?>
             <?= $this->Form->end() ?>
         </div>

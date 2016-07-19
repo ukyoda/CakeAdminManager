@@ -21,6 +21,7 @@
                     <th><?= $this->Paginator->sort('login_name') ?></th>
                     <th><?= $this->Paginator->sort('mail_address') ?></th>
                     <th><?= $this->Paginator->sort('role_mst_id') ?></th>
+                    <th><?= $this->Paginator->sort('admin_flg') ?></th>
                     <th><?= $this->Paginator->sort('status') ?></th>
                     <th><?= $this->Paginator->sort('create_time') ?></th>
                     <th><?= $this->Paginator->sort('update_time') ?></th>
@@ -35,6 +36,7 @@
                     <td><?= h($user->login_name) ?></td>
                     <td><?= h($user->mail_address) ?></td>
                     <td><?= h($user->role_mst->name) ?></td>
+                    <td><?= $user->admin_flg? '<span class="glyphicon glyphicon-ok text-green"></span>': '<span class="glyphicon glyphicon-remove text-red"></span>';?></td>
                     <td><?= $user->status==0? '<span class="label label-danger">使用不可</span>': '<span class="label label-success">使用可</span>';?></td>
                     <td><?= h($user->create_time) ?></td>
                     <td><?= h($user->update_time) ?></td>

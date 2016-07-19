@@ -46,7 +46,7 @@ class UsersTable extends AppTable {
     public function findAdmin(Query $query) {
       $query->where([
           'status' => 1,
-          'role_mst_id' => '0010'
+          'admin_flg' => true
       ]);//statusが1のユーザーのみ取得
       $query->contain(['RoleMst']);//アソシエーション（postsテーブルとアソシエーションしていると仮定）
       return $query;
