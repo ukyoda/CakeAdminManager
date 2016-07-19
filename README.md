@@ -45,7 +45,7 @@ $ bin/cake migrations seed -p AdminManager
 
 ### 新規ユーザ登録 ###
 
-CakePHPがデバッグモードで起動している場合は、下記URLにアクセスすると認証なしでユーザ登録画面にアクセスできます.
+CakePHPをデバッグモードで起動している状態で、下記URLにアクセスすると認証なしでユーザ登録画面にアクセスできる.
 
 //your-server/cake-root/admin-manager/users/create
 
@@ -57,6 +57,59 @@ CakePHPがデバッグモードで起動している場合は、下記URLにア�
 
 //your-server/cake-root/admin-manager
 
+### AdminManager.AuthComponentの使用 ###
+
+本プラグイン付属のAuthコンポーネントを使用することで、
+簡単にログイン画面とログイン処理を実装できます。
+
+```php
+// AppControllerを拡張
+
+use AdminManager\Controller\AppController as BaseController;
+
+class AppController extends BaseController {
+    ...
+}
+
+```
+
+```php
+// 認証処理セットアップ
+public function initialize() {
+    parent::initialize();
+    $this->authSetup([
+        'loginRedirect' => [  // ログイン後に表示するページ
+            'controller' => 'pages',
+            'action' => 'display'
+        ],
+        'logoutRedirect' => [   // ログアウト後に表示するページ
+            'controller' => 'pages',
+            'action' => 'login'
+        ],
+        'loginAction' => [
+            'controller' => 'pages',
+            'action' => 'login'
+        ],
+    ]);
+}
+```
+
+```php
+// ログインアクション
+public function login() {
+    if(!$this->Auth->loginAction()) {
+        $this->Flash->error('ログインできませんでした');
+    }
+}
+
+```
+
+```php
+// ログアウトアクション
+public function logout() {
+    $this->Auth->logoutAction();
+}
+```
 
 ## 注意事項
 
