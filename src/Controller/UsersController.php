@@ -120,27 +120,15 @@ class UsersController extends AdminController {
     }
 
 
-    /**
-     * ログイン処理作成
-     */
     public function login() {
-        $this->setTitle('ログイン');
         $this->viewBuilder()->layout('no-side');
-        if($this->request->is('post')) {
-            $user = $this->Auth->identify();
-            if($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
-            }
-            $this->Flash->error('入力項目にミスがあります。');
+        if(!$this->Auth->loginAction()) {
+            $this->Flash->error('入力項目にミスがあります');
         }
     }
 
-    /**
-     * ログアウト
-     */
     public function logout() {
-        $this->redirect($this->Auth->logout());
+        $this->Auth->logoutAction();
     }
 
 

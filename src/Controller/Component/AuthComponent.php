@@ -5,27 +5,26 @@ namespace AdminManager\Controller\Component;
 use Cake\Controller\Component\AuthComponent as BaseAuthComponent;
 
 class AuthComponent extends BaseAuthComponent {
-    protected $_defaultAuthenticate = [
-        'Form' => [
-            'userModel' => 'AdminManager.Users',
-            'finder' => 'auth',
-            'fields' => [
-                'username' => 'login_name',
-                'password' => 'password'
-            ]
-        ]
-    ];
-    public function initialize(array $config) {
-        if(!array_key_exists('authenticate', $config)) {
-            $config['authenticate'] = [];
+
+    public function loginAction($template = 'AdminManager./Login/form') {
+        $controller = $this->_registry->getController();
+        $controller->render($template);
+        if($controller->request->is('post')) {
+            $user = $this->identify();
+            if($user) {
+                $this->setUser($user);
+                return $controller->redirect($this->redirectUrl());
+            } else {
+                return false;
+            }
+        } else {
+            return true;
         }
-        $config['authenticate'] = array_merge(
-            $this->_defaultAuthenticate,
-            $config['authenticate']
-        );
-        $this->config($config);
-        parent::initialize($config);
-        $this->sessionKey = 'AdminManager.Users';
+    }
+
+    public function logoutAction() {
+        $controller = $this->_registry->getController();
+        return $controller->redirect($this->logout());
     }
 
 }

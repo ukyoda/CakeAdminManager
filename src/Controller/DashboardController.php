@@ -13,7 +13,7 @@ class DashboardController extends AdminController {
     }
 
     public function index() {
-        $this->set('title', __('Dashboard'));
+        $this->setTitle(__('Dashboard'));
         $userCount = $this->Users->find()->count();
         $this->set('userCount', $userCount);
     }
