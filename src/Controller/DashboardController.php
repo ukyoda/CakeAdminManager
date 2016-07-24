@@ -16,6 +16,11 @@ class DashboardController extends AdminController {
         $this->setTitle(__('Dashboard'));
         $userCount = $this->Users->find()->count();
         $this->set('userCount', $userCount);
+        $AccessLogs = TableRegistry::get('AdminManager.AccessLogs');
+        $res = $AccessLogs->find()
+            ->select()
+            ->contain('Users')
+            ->all();
     }
 
 }
