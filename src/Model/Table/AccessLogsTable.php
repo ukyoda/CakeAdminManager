@@ -26,6 +26,12 @@ class AccessLogsTable extends AppTable {
         $this->table('access_logs');
         $this->displayField('id');
         $this->primaryKey('id');
+
+        $this->belongsTo('Users', [
+            'className' => 'AdminManager.Users',
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
 }

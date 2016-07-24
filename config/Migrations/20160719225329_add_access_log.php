@@ -39,7 +39,7 @@ class AddAccessLog extends AbstractMigration
             ->addColumn('user_id', 'biginteger', [
                 'comment' => 'アクセスしたユーザ(未ログイン時はnull)',
                 'default' => null,
-                'null' => true,
+                'null' => false,
             ])
             ->addColumn('create_time', 'timestamp', [
                 'comment' => 'アクセス日時',
